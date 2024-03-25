@@ -1,0 +1,66 @@
+package sistema;
+
+
+import models.Moto;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+import models.Carro;
+import models.Veiculo;
+
+public class Sistema {
+
+	public static void main(String[] args) {
+		
+
+		Scanner teclado = new Scanner(System.in);
+		
+
+		Carro carro2 = new Carro ("toyo","Volkswagen", 4,"Comun");
+
+		Moto moto = new Moto ("2847", "Volkswagen", true);
+		
+		
+		ArrayList<Veiculo> veiculos = new ArrayList<Veiculo>();
+		
+		
+		Veiculo [] veiculo = new Veiculo [5];
+		for (int i = 0; i < veiculo.length; i++) {
+			Veiculo  v = new Veiculo ("","");
+			veiculo[i] = v;
+		}
+		
+		do {
+			
+			menu();
+			int escolha = teclado.nextInt();		
+			
+			switch(escolha) {
+			case 1:{
+				
+				System.out.println();
+				
+			}
+			}
+			
+		} while(true);
+				
+		
+		
+	}
+
+
+static public void menu() {
+	System.out.println(" ");
+	System.out.println("Bem Vindo ao Sistema - Veiculos ");
+	System.out.println(" ");
+	System.out.println("------------------------------------");
+	System.out.println("1 - Cadastrar um Carro");
+	System.out.println("2 - Cadastrar uma Moto");
+	System.out.println("9 - Listar os Veiculos");
+	System.out.println("------------------------------------");
+	System.out.println(" ");
+}
+
+}

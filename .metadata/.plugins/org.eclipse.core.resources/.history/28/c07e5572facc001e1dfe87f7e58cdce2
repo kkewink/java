@@ -1,0 +1,39 @@
+package Exemplos;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+import Models.Vaga;
+
+public class ExemploTryCatch {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner (System.in);
+		int idade = 0;
+		
+					
+		
+		do {
+			System.out.println("Qual sua idade ?");	
+			try {
+				idade = sc.nextInt();
+			} catch (Exception e) {
+				System.out.println("Você digitou errado!");
+				sc.nextLine();
+			}
+		} while (idade <= 0 );
+		
+	
+		ArrayList<Vaga> vagas = new ArrayList<Vaga>();
+		
+		
+				
+		
+	
+		
+		
+		
+		
+	}
+}

@@ -1,0 +1,11 @@
+package sistema;
+
+public class ManipuletionFile {
+
+	public static void main(String[] args) {
+		//escrevendo em um arquivo de texto
+		writeFile("fileData.txt","Ola, mundo!");
+
+	}
+
+}

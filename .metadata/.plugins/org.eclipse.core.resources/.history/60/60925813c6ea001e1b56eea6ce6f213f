@@ -1,0 +1,46 @@
+package cadastrados;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+import models.Eletronico;
+public class CadastrarEletronico {
+	
+	ArrayList<Eletronico> produto = new ArrayList<Eletronico>();
+	
+	Scanner teclado = new Scanner(System.in);
+	
+	public void newCadastrarEletronico() {
+		
+		 String nome;
+		 String descricao;
+		 int codigo;
+		 int quantidade;
+		 double preco;
+		 String marca ;
+		 String modelo;
+		 
+		 System.out.println("-----------------------------------------------");
+			System.out.println("Cadastro de Eletronico");
+
+			boolean nomeErro = false;
+			while (nomeErro == false) {
+				System.out.println("Digite o Nome do Eletronico: ");
+				try {
+					nome = teclado.nextLine();
+					if (nome.length() == 0) {
+						System.out.println("------NÂO DEIXEI EM BRANCO------");
+					} else {
+
+						nomeErro = true;
+					}
+				} catch (Exception e) {
+
+				}
+
+			}
+		
+	}
+	
+
+}

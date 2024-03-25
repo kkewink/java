@@ -1,0 +1,132 @@
+package cadastrados;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+import models.Eletronico;
+public class CadastrarEletronico {
+	
+	ArrayList<Eletronico> produto = new ArrayList<Eletronico>();
+	
+	Scanner teclado = new Scanner(System.in);
+	
+	public void newCadastrarEletronico() {
+		
+		 String nome;
+		 String descricao;
+		 int codigo;
+		 int quantidade;
+		 double preco;
+		 String marca ;
+		 String modelo;
+		 
+		 System.out.println("-----------------------------------------------");
+			System.out.println("Cadastro de Eletronico");
+
+			boolean nomeErro = false;
+			while (nomeErro == false) {
+				System.out.println("Digite o Nome do Eletronico: ");
+				try {
+					nome = teclado.nextLine();
+					if (nome.length() == 0) {
+						System.out.println("------NÂO DEIXEI EM BRANCO------");
+					} else {
+
+						nomeErro = true;
+					}
+				} catch (Exception e) {
+
+				}
+
+			}
+			
+			boolean descricaoErro = false;
+			while (descricaoErro == false) {
+				System.out.println("Digite a Descrição do Eletronico: ");
+				try {
+					descricao = teclado.nextLine();
+					if (descricao.length() == 0) {
+						System.out.println("------NÂO DEIXEI EM BRANCO------");
+					} else {
+
+						descricaoErro = true;
+					}
+				} catch (Exception e) {
+
+				}
+
+			}
+			
+			boolean codigoErro = false;
+			while (codigoErro == false) {
+				System.out.println("Digite o Numero do Eletronico: ");
+
+				try {
+					codigo = teclado.nextInt();
+					if (codigo < 0) {
+						System.out.println("-------DIGITE UM VALOR POSITIVO-----");
+					} else {
+						codigoErro = true;
+					}
+				} catch (Exception e) {
+					System.out.println("-------DIGITE APENAS NUMEROS------");
+				}
+				teclado.nextLine();
+			}
+		
+			boolean quantidadeErro = false;
+			while (quantidadeErro == false) {
+				System.out.println("Digite quantos Eletronicos ira comprar: ");
+
+				try {
+					quantidade = teclado.nextInt();
+					if (quantidade < 0) {
+						System.out.println("-------DIGITE UM VALOR POSITIVO-----");
+					} else {
+						quantidadeErro = true;
+					}
+				} catch (Exception e) {
+					System.out.println("-------DIGITE APENAS NUMEROS------");
+				}
+				teclado.nextLine();
+			}
+			
+			boolean marcaErro = false;
+			while (marcaErro == false) {
+				System.out.println("Digite a marca do Eletronico: ");
+				try {
+					marca = teclado.nextLine();
+					if (marca.length() == 0) {
+						System.out.println("------NÂO DEIXEI EM BRANCO------");
+					} else {
+
+						marcaErro = true;
+					}
+				} catch (Exception e) {
+
+				}
+
+			}
+			
+			boolean modeloErro = false;
+			while (modeloErro == false) {
+				System.out.println("Digite o Nome do Eletronico: ");
+				try {
+					modelo = teclado.nextLine();
+					if (modelo.length() == 0) {
+						System.out.println("------NÂO DEIXEI EM BRANCO------");
+					} else {
+
+						modeloErro = true;
+					}
+				} catch (Exception e) {
+
+				}
+
+			}
+			
+			
+	}
+	
+
+}

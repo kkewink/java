@@ -1,0 +1,17 @@
+package cadastrados;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+import models.Alimento;
+
+public class CadastrarAliemento {
+	
+	ArrayList<Alimento> produto = new ArrayList<Alimento>();
+	
+	Scanner teclado = new Scanner(System.in);
+	
+	public void newCadastrarAlimento() {
+		
+	}
+	
+}

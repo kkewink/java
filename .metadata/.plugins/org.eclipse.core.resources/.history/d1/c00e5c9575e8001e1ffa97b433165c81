@@ -1,0 +1,15 @@
+package models;
+
+import java.util.Scanner;
+
+public class Tabuada {
+	
+	public static void caluclarTabuada() {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Digite ate o fato da tabuada");
+		int fator = sc.nextInt();
+		
+	}
+
+}

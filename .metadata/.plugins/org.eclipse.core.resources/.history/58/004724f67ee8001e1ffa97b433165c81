@@ -1,0 +1,28 @@
+package models;
+
+import java.time.LocalDate;
+
+public class Alimento extends Produto {
+	
+	public Alimento(String nome, String descricao, int codigo, int quantidade, double preco) {
+		super(nome, descricao, codigo, quantidade, preco);
+		
+	}
+
+	private LocalDate  dataValidade;
+
+	public LocalDate getDataValidade() {
+		return dataValidade;
+	}
+
+	public void setDataValidade(LocalDate dataValidade) {
+		this.dataValidade = dataValidade;
+	}
+
+	@Override
+	public void exibirInfo () {
+		super.exibirInfo();
+		System.out.println("Validade do Produto : " + this.getDataValidade());
+		
+	}
+}

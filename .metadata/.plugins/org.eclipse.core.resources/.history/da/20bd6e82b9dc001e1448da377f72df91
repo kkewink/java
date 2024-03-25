@@ -1,0 +1,44 @@
+package sistema;
+
+
+import models.Moto;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+import models.Carro;
+import models.Veiculo;
+
+public class Sistema {
+
+	public static void main(String[] args) {
+		
+
+		Scanner teclado = new Scanner(System.in);
+		
+		
+		Veiculo veiculo = new Veiculo ("Fusca", "Volkswagen");
+
+		Carro carro2 = new Carro ("toyo","Volkswagen", 4,"Comun");
+
+		Moto moto = new Moto ("2847", "Volkswagen", true);
+		
+		
+		ArrayList<Veiculo> veiculos = new ArrayList<Veiculo>();
+		
+		
+		Veiculo [] veiculos2 = new Veiculo [5];
+		for (int i = 0; i < veiculos.length; i++) {
+			Veiculo  v = new Veiculo ("","");
+			veiculos[i] = v;
+		}
+		
+		
+		
+		
+		
+		
+		
+	}
+
+}

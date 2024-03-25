@@ -1,0 +1,260 @@
+package sistema;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+import models.Pessoa;
+
+public class Sistema {
+
+	public static void main(String[] args) {
+		Scanner teclado = new Scanner(System.in);
+
+		Pessoa[] pessoas = new Pessoa[5];
+
+		for (int i = 0; i < pessoas.length; i++) {
+			Pessoa p = new Pessoa("", 0.0, 0, true & false, true & false, true & false, "");
+			pessoas[i] = p;
+		}
+
+		ArrayList<Pessoa> funcionario = new ArrayList<Pessoa>();
+
+		do {
+			int escolha = 0;
+			menu();
+			escolha = teclado.nextInt();
+
+			switch (escolha) {
+			case 1: {
+				System.out.println("-------------------------------------------");
+				// Criar a nova pessoa e adicionar na lista
+				System.out.println("Digite seu nome: ");
+				String nome = teclado.next();
+				System.out.println("Digite seu Salario Bruto: ");
+				Double salarioBruto = teclado.nextDouble();
+				System.out.println("Digite quantas pessoas depente de você: ");
+				int numeroDependentes = teclado.nextInt();
+				
+				
+				boolean vr = false || true;								
+			
+				
+				do {
+					String sim = ("");
+					String nao = ("");
+					
+					System.out.println("Possui Vale Refeição?: ");
+					System.out.println("-- SIM = TRUE | NÂO = FALSE --");
+					String tem = teclado.next();		
+										
+
+						if (tem.equalsIgnoreCase(nao) || tem.equalsIgnoreCase(sim)) {
+							// System.out.println("Login feito com sucesso " + Login);
+							vr = true;
+						} else {
+							System.out.println("nao");
+						}
+					
+				}while(vr == false || true);
+				System.out.println("sim");
+				
+				
+	
+				
+				
+				boolean va = false;					
+				System.out.println("Possui Vale Alimentação?: ");
+				System.out.println("-- SIM = TRUE | NÂO = FALSE --");
+				va = teclado.nextBoolean();
+				
+				System.out.println("Possui Vale Tranporte?: ");
+				System.out.println("-- SIM = TRUE | NÂO = FALSE --");
+				boolean vt = teclado.nextBoolean();
+				
+				
+				
+				
+				System.out.println("Qual seu tipo de plano de saúde?:");
+				System.out.println("-- Basico | Premium | Platinum Premium Plus --");
+				String planoDeSaude = teclado.next();
+				
+				System.out.print("NOVO FUNCIONARIO CRIADO COM SUCESSO");
+				
+				System.out.println("-------------------------------------------");
+
+				Pessoa p = new Pessoa(nome, salarioBruto, numeroDependentes, vr, va, vt, planoDeSaude);
+
+				funcionario.add(p);
+
+				continue;
+
+			}
+			case 2: {
+				System.out.println("-------------------------------------------");
+				funcionario.forEach(pessoasCadastradas -> {
+					System.out.println("Funcionario N°: " + funcionario.indexOf(pessoasCadastradas));
+					System.out.println("Nome: " + pessoasCadastradas.getNome());
+					System.out.println("Salario Bruto: " + pessoasCadastradas.getSalarioBruto());
+					System.out.println("Seus Dependentes: " + pessoasCadastradas.getNumeroDependentes());
+					System.out.println("Seu VR è de: " + pessoasCadastradas.isVr());
+					System.out.println("Seu VA è de: " + pessoasCadastradas.isVa());
+					System.out.println("Seu VT è de: " + pessoasCadastradas.isVt());
+					System.out.println("Seu plano de Saúde: " + pessoasCadastradas.getPlanoDeSaude());
+				});
+				System.out.println("-------------------------------------------");
+				continue;
+				
+			}
+			case 3: {
+				System.out.println("-------------------------------------------");
+				int posisao = funcionario.indexOf(funcionario);
+
+				System.out.println("Qual Funcionario você deseja modficiar: ");
+				int funcionarioModificar = teclado.nextInt();
+
+				System.out.println("O que voce deseja modficiar ?");
+				System.out.println("");
+				System.out.println("1 - Nome");
+				System.out.println("2 - SalarioBruto");
+				System.out.println("3 - Dependentes");
+				System.out.println("4 - VR");
+				System.out.println("5 - VA");
+				System.out.println("6 - VT");
+				System.out.println("7 - Plano De Saude");
+				System.out.println("8 - Alterar tudo");
+				System.out.println("");
+				int modificar = teclado.nextInt();
+				
+				System.out.println("-------------------------------------------");
+				
+				switch (modificar) {
+				
+				case 1:
+					System.out.println("-------------------------------------------");
+					System.out.println("Altere o Nome do funcionario: ");
+					String modificarNome = teclado.nextLine();
+					funcionario.get(funcionarioModificar).setNome(modificarNome);
+					teclado.nextLine();
+					
+					System.out.println("-------------------------------------------");
+					continue;
+					
+				case 2:
+					System.out.println("Altere o Salario do funcionario: ");
+					double modificarSalario = teclado.nextDouble();
+					funcionario.get(funcionarioModificar).setSalarioBruto(modificarSalario);
+
+					System.out.println("-------------------------------------------");
+				case 3:
+					System.out.println("Altere o Salario do funcionario: ");
+					int modificarDepende = teclado.nextInt();
+					funcionario.get(funcionarioModificar).setNumeroDependentes(modificarDepende);
+
+					System.out.println("-------------------------------------------");
+				case 4:
+					System.out.println("Altere o Salario do funcionario: ");
+					boolean modificarVr = teclado.nextBoolean();
+					funcionario.get(funcionarioModificar).setVr(modificarVr);
+
+					System.out.println("-------------------------------------------");
+				case 5:
+					System.out.println("Altere o Salario do funcionario: ");
+					boolean modificarVa = teclado.nextBoolean();
+					funcionario.get(funcionarioModificar).setVa(modificarVa);
+					
+					System.out.println("-------------------------------------------");
+				case 6:
+					System.out.println("Altere o Salario do funcionario: ");
+					boolean modificarVt = teclado.nextBoolean();
+					funcionario.get(funcionarioModificar).setVt(modificarVt);
+					
+					System.out.println("-------------------------------------------");
+				case 7:
+					System.out.println("Altere o Salario do funcionario: ");
+					String modificarPlano = teclado.nextLine();
+					funcionario.get(funcionarioModificar).setPlanoDeSaude(modificarPlano);
+
+					System.out.println("-------------------------------------------");
+				case 8:
+					System.out.println("Altere o Nome: ");
+					String modificarFsnome = teclado.nextLine();
+					funcionario.get(funcionarioModificar).setNome(modificarFsnome);
+
+					System.out.println("Altere o Salário:");
+					Double modificarFsSalario = teclado.nextDouble();
+					funcionario.get(funcionarioModificar).setSalarioBruto(modificarFsSalario);
+
+					System.out.println("Altere o numero de Dependentes: ");
+					int modificarFden = teclado.nextInt();
+					funcionario.get(funcionarioModificar).setNumeroDependentes(modificarFden);
+
+					System.out.println("Altere o VR: ");
+					boolean modificarFVR = teclado.nextBoolean();
+					funcionario.get(funcionarioModificar).setVr(modificarFVR);
+
+					System.out.println("Altere o VA: ");
+					boolean modificarFVA = teclado.nextBoolean();
+					funcionario.get(funcionarioModificar).setVa(modificarFVA);
+
+					System.out.println("Altere o VT: ");
+					boolean modificarFVT = teclado.nextBoolean();
+					funcionario.get(funcionarioModificar).setVt(modificarFVT);
+					
+					System.out.println("-------------------------------------------");
+					break;
+				}
+
+			}
+
+			case 4: {
+				System.out.println("-------------------------------------------");
+				System.out.println("Digite qual Funcionario você deseja apagar: ");
+				int funcionarioDeletar = teclado.nextInt();
+				funcionario.remove(funcionarioDeletar);
+				System.out.println("FUNCIONARIO DELETADO COM SUCESSO");
+				System.out.println("-------------------------------------------");
+				continue;
+			}
+
+			case 5: {
+				System.out.println("-------------------------------------------");
+				int posicao = funcionario.indexOf(funcionario);
+
+				System.out.println("Qual Funcionario você deseja Visualizar: ");
+				posicao = teclado.nextInt();
+
+				System.out.println("Aqui todas as informações desses Funcionario");
+				funcionario.forEach(tudo -> {
+					System.out.println("N° do Funcionario: " + funcionario.indexOf(tudo));
+					System.out.println("Nome do Funcionario: " + tudo.getNome());
+					System.out.println("Salario do Funcionario: " + tudo.getNome());
+					System.out.println("Este Funcionario tem " + tudo.getNumeroDependentes() + " Dependentes");
+					System.out.println("Aqui Seus Beneficios");
+					System.out.println("Este funcionario " + tudo.isVr() + " o Vale Refeição");
+					System.out.println("Este funcionario " + tudo.isVa() + " o Vale Alimentação");
+					System.out.println("Este funcionario " + tudo.isVt() + " o Vale Transporte");
+					System.out.println("Este Funcionario tem o Plano de Saúde " + tudo.getPlanoDeSaude());
+				});
+				System.out.println("-------------------------------------------");
+				continue;
+			}
+
+			}
+
+		} while (true);
+	}
+
+	static public void menu() {
+		System.out.println(" ");
+		System.out.println("Bem Vindo ao Sistema - Gerenciamento de Funcionarios");
+		System.out.println("------------------------------------------------------------------------");
+		System.out.println("1 - Criar um novo Funcionario e adicioná-lo á lista");
+		System.out.println("2 - Lista de todos os Funcinarios");
+		System.out.println("3 - Editar informações de um Funcionario");
+		System.out.println("4 - Deletar um Funcionario");
+		System.out.println("5 - Visualizar detalhades de um Funcionario");
+		System.out.println("6 - Calcular o salário do Funcionario");
+		System.out.println("9 - Fechar o Sistema");
+		System.out.println("------------------------------------------------------------------------");
+	}
+}

@@ -1,0 +1,63 @@
+package Exemplos;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+import Models.Vaga;
+
+public class ExemploTryCatch {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner (System.in);
+		ArrayList<Vaga> vagas = new ArrayList<Vaga>();
+		int idade = 0;
+		
+					
+		
+		do {
+			
+			System.out.println("######################");
+			System.out.println("1 - Criar Vaga");
+			System.out.println("9 - Sair do SIstema");
+			System.out.println("######################");
+			int opcao = sc.nextInt();
+			
+			switch (opcao) {
+			case 1: {
+				Vaga vaga = new Vaga();
+				System.out.println("Candidatos ?");
+				vaga.setCandidatos(sc.nextInt());
+				
+				System.out.println("Descricao ?");
+				vaga.setDescricao(sc.next());
+				
+				System.out.println("Requisitos ?");
+				vaga.setRequisitos(sc.next());
+				
+				System.out.println("Horario ?");
+				vaga.setHorario(sc.next());
+				
+				System.out.println("Modelo ?");
+				vaga.setModelo(sc.next());
+				
+				System.out.println("Salario ?");
+			}
+			case 9: {
+				System.exit(0);
+			}
+			}
+		}while (true);
+	
+		
+		
+		
+				
+		
+	
+		
+		
+		
+		
+	}
+}

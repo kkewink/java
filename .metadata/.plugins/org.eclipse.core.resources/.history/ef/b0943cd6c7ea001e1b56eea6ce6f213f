@@ -1,0 +1,25 @@
+package cadastrados;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+import models.Produto;
+
+public class CadastrarProduto {
+	
+
+	ArrayList<Produto> produto = new ArrayList<Produto>();
+
+	Scanner teclado = new Scanner(System.in);
+	
+	public void newCadastrarProduto() {
+		
+		String nome = "";
+		String descricao = "";
+		int codigo = 0;
+		int quantidade = 0;
+		double preco = 0;
+	}
+
+
+}

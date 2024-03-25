@@ -1,0 +1,37 @@
+package sistema;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+public class ManipuletionFile {
+
+	public static void main(String[] args) {
+		//escrevendo em um arquivo de texto
+		writeToFile("fileData.txt","Ola, mundo!");
+		
+		//lendo de um arquivo de texto
+		String content = readFromFile("filedata.txt");
+		System.out.println("Conteudo lido do arquivo: " + content);
+
+	}
+
+	private static String readFromFile(String string) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public static void writeToFile(String fileName, String content) {
+		try (BufferedWriter writer = new BufferedWriter(new FileWriter(fileName))) {
+			//Escrevendo o ocnteudo no arquivo
+			write.write(content);
+			System.out.println("Conteúdo escrito no arquivo com sucesso.");			
+		} catch (Exception e) {
+			System.out.println("Erro ao escrever no arquivo: " + e.getMessage());
+		}
+	}
+
+
+	}
+
+

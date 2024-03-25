@@ -1,0 +1,9 @@
+package models;
+
+import java.time.LocalDate;
+
+public class Alimento extends Produto {
+	
+	private LocalDate  dataValidade;
+
+}

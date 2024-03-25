@@ -1,0 +1,62 @@
+package aulas;
+
+/*CRIAR A CONTA PRO CLIENTE*/
+
+public class Cliente extends pessoa {
+
+	private boolean podePegarEmprest;
+	
+	public Cliente(String name, String rg, String cpf, String email) {
+		super();
+		this.name = name;
+		this.rg = rg;
+		this.cpf = cpf;
+		this.email = email;
+	}
+	
+	public Cliente() {
+		System.out.println("crie um cliente sem nada!!");
+		
+		this.setPodePegarEmprest(false);
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getRg() {
+		return rg;
+	}
+
+	public void setRg(String rg) {
+		this.rg = rg;
+	}
+
+	public String getCpf() {
+		return cpf;
+	}
+
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public String getPodePegarEmprest() {
+		return podePegarEmprest;
+	}
+
+	public void setPodePegarEmprest(String podePegarEmprest) {
+		this.podePegarEmprest = podePegarEmprest;
+	}
+
+}

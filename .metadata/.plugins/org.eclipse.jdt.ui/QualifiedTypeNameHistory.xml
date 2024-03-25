@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="aulas.Functions"/>
+    <fullyQualifiedTypeName name="Atividades.Atividade1_17_10"/>
+    <fullyQualifiedTypeName name="entidades.contaBANCO"/>
+    <fullyQualifiedTypeName name="models.Usuario"/>
+    <fullyQualifiedTypeName name="models.Cliente"/>
+    <fullyQualifiedTypeName name="javax.swing.plaf.synth.SynthOptionPaneUI"/>
+    <fullyQualifiedTypeName name="Models.Vaga"/>
+    <fullyQualifiedTypeName name="models.Pessoa"/>
+    <fullyQualifiedTypeName name="models.Carro"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="cadastrar.CadastrarCarro"/>
+    <fullyQualifiedTypeName name="models.Moto"/>
+    <fullyQualifiedTypeName name="cadastrar.CadastrarMoto"/>
+    <fullyQualifiedTypeName name="models.tabuleiro"/>
+    <fullyQualifiedTypeName name="java.io.BufferedReader"/>
+    <fullyQualifiedTypeName name="java.io.IOException"/>
+    <fullyQualifiedTypeName name="models.Alimento"/>
+    <fullyQualifiedTypeName name="models.Eletronico"/>
+    <fullyQualifiedTypeName name="cadastrados.CadastrarEletronico"/>
+    <fullyQualifiedTypeName name="models.Produto"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="cadastrados.CadastrarProduto"/>
+    <fullyQualifiedTypeName name="cadastrados.CadastrarAliemento"/>
+    <fullyQualifiedTypeName name="cadastrados.CadastrarAlimento"/>
+    <fullyQualifiedTypeName name="java.time.LocalDate"/>
+    <fullyQualifiedTypeName name="java.time.format.DateTimeFormatter"/>
+    <fullyQualifiedTypeName name="java.time.LocalDateTime"/>
+</qualifiedTypeNameHistroy>

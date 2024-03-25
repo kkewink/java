@@ -1,0 +1,36 @@
+package sistema;
+
+import java.util.Scanner;
+
+public class tabuada {
+
+	public static void main(String[] args) {
+		Scanner teclado = new Scanner (System.in);
+		
+		
+
+        System.out.println("------------------------------------------");
+        System.out.println("          TABUADA MANEIRA ");
+        System.out.println("------------------------------------------");
+
+        System.out.println("Digite o numero para a tabuada: ");
+        int tabuada = teclado.nextInt();
+
+        System.out.println("Agora digite ate que numero você quer: ");
+        int numero = teclado.nextInt();
+
+        System.out.println("Aqui esta sua tabuada como pediu: ");
+
+        for(int i = 1 ; i <= numero; i++) {
+        
+        int conta =	System.out.println(tabuada + "x" + i + " = " + (tabuada * i));
+
+        }
+        
+        teclado.close();
+        System.out.println("------------------------------------------");
+		}
+		
+	}
+
+

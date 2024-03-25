@@ -1,0 +1,10 @@
+package models;
+
+public class Eletronico extends Produto {
+
+	public Eletronico(String nome, String descricao, int codigo, int quantidade, double preco) {
+		super(nome, descricao, codigo, quantidade, preco);
+		// TODO Auto-generated constructor stub
+	}
+
+}

@@ -1,0 +1,11 @@
+package models;
+
+public class Produto {
+	
+	 private String nome;
+	 private String descricao;
+	 private int codigo;
+	 private int quantidade;
+	 private dobule preco;
+
+}

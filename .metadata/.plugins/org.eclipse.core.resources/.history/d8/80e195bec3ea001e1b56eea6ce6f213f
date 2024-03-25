@@ -1,0 +1,7 @@
+package cadastrados;
+
+public class CadastrarEletronico {
+	
+	ArrayList<Eletronico> produto = new ArrayList<Eletronico>();
+
+}

@@ -1,0 +1,38 @@
+package sistema;
+
+import java.util.Scanner;
+
+import models.Moto;
+import models.Carro;
+import models.Veiculo;
+
+public class Sistema {
+
+	public static void main(String[] args) {
+		
+
+		Veiculo carro = new Veiculo ("Fusca", "Volkswagen");
+		
+		System.out.println("");
+		System.out.println("Classe Veiculo");
+		carro.exibirInfo();
+		System.out.println("");
+		
+		Carro carro2 = new Carro ("toyo","Volkswagen", 4,"Comun");
+		
+		System.out.println("");
+		System.out.println("Classe Carro");
+		carro2.exibirInfo();
+		System.out.println("");
+		
+		Moto moto = new Moto ("2847", "Volkswagen", true);
+		
+		System.out.println("");
+		System.out.println("Classe Moto");
+		moto.exibirInfo();
+		System.out.println("");
+		
+		
+	}
+
+}

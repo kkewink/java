@@ -1,0 +1,21 @@
+package Atividades;
+
+public class Boletim {
+	
+	String nome;
+	double nota1;
+	double note2;
+	double note3;
+	
+	public Boletim(String nome, double nota1, double note2, double note3) {
+		super();
+		this.nome = nome;
+		this.nota1 = nota1;
+		this.note2 = note2;
+		this.note3 = note3;
+	}
+
+	public void calcularNota() {
+		double notaFinal = nota1 + nota2 + nota3; 
+	}
+}

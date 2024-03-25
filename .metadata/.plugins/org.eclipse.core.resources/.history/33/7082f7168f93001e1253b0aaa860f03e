@@ -1,0 +1,10 @@
+package Atividades;
+
+public class Boletim {
+	
+	String nome;
+	double nota1;
+	double note2;
+	double note3;
+
+}

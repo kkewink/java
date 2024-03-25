@@ -1,0 +1,11 @@
+package cadastrados;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+import models.Eletronico;
+public class CadastrarEletronico {
+	
+	ArrayList<Eletronico> produto = new ArrayList<Eletronico>();
+
+}

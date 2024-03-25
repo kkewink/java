@@ -1,0 +1,16 @@
+package models;
+
+public class Eletronico extends Produto {
+	
+	private String marca;
+	private String modelo;
+
+	public Eletronico(String nome, String descricao, int codigo, int quantidade, double preco) {
+		super(nome, descricao, codigo, quantidade, preco);
+		this.marca = marca;
+		this.modelo = modelo;
+	}
+
+	
+	
+}
