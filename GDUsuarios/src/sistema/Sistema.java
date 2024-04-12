@@ -11,7 +11,7 @@ public class Sistema {
 		int opcao = 0;
 		do {
 			// \n
-			System.out.println("1 - Criar \n2 - Editar \n3 - Deletar \n4 - Listar \n5 - Listar Especifico \n9 - Sair\n");
+			System.out.println("1 - Criar \n2 - Editar \n3 - Deletar \n4 - Listar \n5 - Listar Especifico \n6 - Login \n9 - Sair\n");
 			
 			// 5 - listar Especifico
 			// Qual id voce seja vizualizar?
@@ -26,16 +26,25 @@ public class Sistema {
 			}
 			case 2:{
 				hm.editar();
+				break;
 			}
 			case 3:{
 				hm.deletar();
+				break;
 			}
 			case 4:{
 				hm.listar();
+				break;
 			}
 			case 5:{
 				hm.listaEspecifico();
+				break;
 			}
+			case 6:{
+				hm.login();
+				break;
+			}
+			
 			default:
 				System.out.println("");
 				break;

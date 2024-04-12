@@ -74,5 +74,15 @@ public class HandleMenu {
 		
 	}
 	
+	public void login() {
+		System.out.println("Digite seu login :");
+		String nome = sc.next();
+		System.out.println("Digite uma senha:");
+		String senha = sc.next();
+		
+		gs.login( nome, senha);
+		
+		
+	}
 	
 }

@@ -90,12 +90,13 @@ public class GerenciadorDeUsuarios {
 
 		List<Usuario> usuarios = lerUsuarios();
 		// nehum usuario
-		if(usuarios.isEmpty()) {
+		if (usuarios.isEmpty()) {
 			System.out.println("Nenhum usuario cadastrado");
-		}else {
+		} else {
 			System.out.println("Lista de usuarios");
-			for(Usuario usuario : usuarios) {
-				System.out.println("ID: " + usuario.getId() + "; Nome: " + usuario.getNome()+ "" + "; Senha: " + usuario.getSenha());
+			for (Usuario usuario : usuarios) {
+				System.out.println("ID: " + usuario.getId() + "; Nome: " + usuario.getNome() + "" + "; Senha: "
+						+ usuario.getSenha());
 			}
 		}
 	}
@@ -103,32 +104,54 @@ public class GerenciadorDeUsuarios {
 	public void editarUsuario(int id, String novoNome, String novaSenha) {
 		List<Usuario> usuarios = lerUsuarios();
 		boolean encontrado = false;
-		
-		for(Usuario usuario : usuarios) {
-			if(usuario.getId() == id) {
+
+		for (Usuario usuario : usuarios) {
+			if (usuario.getId() == id) {
 				usuario.setNome(novoNome);
 				usuario.setSenha(novaSenha);
 				encontrado = true;
 				break;
 			}
 		}
-		if(encontrado) {
+		if (encontrado) {
 			reescreverArquivo(usuarios);
 			System.out.println("Usuario editado com sucesso!");
-		}else {
+		} else {
 			System.out.println("Usuario não encontrados");
 		}
-		
+
 	}
 
 	public void listarEspecifico(int id) {
 		List<Usuario> usuarios = lerUsuarios();
-		
-		for(Usuario usuario : usuarios) {
-			if(usuario.getId() == id) {
-				System.out.println("ID: " + usuario.getId() + "; Nome: " + usuario.getNome()+ "" + "; Senha: " + usuario.getSenha());
+
+		for (Usuario usuario : usuarios) {
+			if (usuario.getId() == id) {
+				System.out.println("ID: " + usuario.getId() + "; Nome: " + usuario.getNome() + "" + "; Senha: "
+						+ usuario.getSenha());
 			}
 		}
-		
+
+	}
+
+	public void login(String nomelogin, String senhaLogin) {
+		List<Usuario> usuarios = lerUsuarios();
+
+		boolean acesso = false;
+
+		for (Usuario usuario : usuarios) {
+
+			if (usuario.getNome().equals(nomelogin) && usuario.getSenha().equals(senhaLogin)) {
+				acesso = true;
+			} else {
+				acesso = false;
+			}
+		}
+		if (acesso == true) {
+			System.out.println("Login Efetivado!");
+		} else {
+			System.out.println("ACESSO NEGADO");
+		}
+
 	}
 }
