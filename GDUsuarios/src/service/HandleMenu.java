@@ -1,0 +1,62 @@
+package service;
+
+import java.util.List;
+import java.util.Scanner;
+
+import models.Usuario;
+import utils.GerenciadorDeUsuarios;
+
+public class HandleMenu {
+
+	Scanner sc = new Scanner(System.in);
+
+	// Gerenciador
+	GerenciadorDeUsuarios gs = new GerenciadorDeUsuarios();
+
+	public HandleMenu() {
+		// tida vez qye a classe menu, for instanciada, o nosso arquivo sera verificado
+		gs.verificaECria("usuarios.txt");
+	}
+
+	public void criar() {
+		System.out.println("Digite o nome:");
+		String nome = sc.next();
+		System.out.println("Digite uma senha:");
+		String senha = sc.next();
+
+		Usuario u = new Usuario(1, nome, senha);
+		gs.adicionarUsuario(u);
+	}
+
+	public void editar() {
+
+	}
+
+	public void deletar() {
+		System.out.println("Digite o ID do usuario a ser deletado:");
+		int id = sc.nextInt();
+
+	}
+
+	public void listar() {
+
+	}
+
+	public int getNextId() {
+		List<Usuario> usuarios = gs.lerUsuarios();
+		int maxId = 0;
+		// for => foreach
+		// Unico usuario : Lista com todos
+		for (Usuario usuario : usuarios) {
+			int id = usuario.getId();
+			// 1
+			if (id > maxId) {
+				maxId = id;
+				// 10
+			}
+		}
+		// soma 1 + o ultimo
+		return maxId + 1;
+	}
+
+}
