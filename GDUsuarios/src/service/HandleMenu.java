@@ -24,7 +24,8 @@ public class HandleMenu {
 		System.out.println("Digite uma senha:");
 		String senha = sc.next();
 
-		Usuario u = new Usuario(1, nome, senha);
+		int id = getNextId();
+		Usuario u = new Usuario(id, nome, senha);
 		gs.adicionarUsuario(u);
 	}
 
@@ -35,11 +36,11 @@ public class HandleMenu {
 	public void deletar() {
 		System.out.println("Digite o ID do usuario a ser deletado:");
 		int id = sc.nextInt();
-
+		gs.deletarUsuario(id);
 	}
 
 	public void listar() {
-
+		gs.listarUsuarios();
 	}
 
 	public int getNextId() {

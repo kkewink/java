@@ -18,6 +18,15 @@ public class Sistema {
 				hm.criar();
 				break;
 			}
+			case 2:{
+				hm.editar();
+			}
+			case 3:{
+				hm.deletar();
+			}
+			case 4:{
+				hm.listar();
+			}
 			default:
 				System.out.println("Opção Invalida");
 				break;

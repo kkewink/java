@@ -68,6 +68,7 @@ public class GerenciadorDeUsuarios {
 		List<Usuario> usuarios = lerUsuarios();
 
 		if (usuarios.removeIf(usuario -> usuario.getId() == id)) {
+			reescreverArquivo(usuarios);
 			System.out.println("Usuario deletado com sucesso");
 		} else {
 			System.out.println("Usuario não encontrado");
@@ -85,4 +86,16 @@ public class GerenciadorDeUsuarios {
 		}
 	}
 
+	public void listarUsuarios() {
+		List<Usuario> usuarios = lerUsuarios();
+		// nehum usuario
+		if(usuarios.isEmpty()) {
+			System.out.println("Nenhum usuario cadastrado");
+		}else {
+			System.out.println("Lista de usuarios");
+			for(Usuario usuario : usuarios) {
+				System.out.println("ID: " + usuario.getId() + "; Nome: " + usuario.getNome()+ "" + "; Senha: " + usuario.getSenha());
+			}
+		}
+	}
 }
