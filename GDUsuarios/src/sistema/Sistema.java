@@ -11,7 +11,13 @@ public class Sistema {
 		int opcao = 0;
 		do {
 			// \n
-			System.out.println("1 - Criar \n2 - Editar \n3 - Deletar \n4 - Listar\n9 - Sair\n");
+			System.out.println("1 - Criar \n2 - Editar \n3 - Deletar \n4 - Listar \n5 - Listar Especifico \n9 - Sair\n");
+			
+			// 5 - listar Especifico
+			// Qual id voce seja vizualizar?
+			// 4
+			// Objeto N4
+			
 			opcao = sc.nextInt();
 			switch (opcao) {
 			case 1: {
@@ -27,8 +33,11 @@ public class Sistema {
 			case 4:{
 				hm.listar();
 			}
+			case 5:{
+				hm.listaEspecifico();
+			}
 			default:
-				System.out.println("Opção Invalida");
+				System.out.println("");
 				break;
 			}
 		} while (opcao != 9);

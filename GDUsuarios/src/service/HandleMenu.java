@@ -30,7 +30,14 @@ public class HandleMenu {
 	}
 
 	public void editar() {
-
+		System.out.println("Digite o ID do usuario:");
+		int id = sc.nextInt();
+		System.out.println("Digite o novo nome:");
+		String nome = sc.next();
+		System.out.println("Digite a nova senha:");
+		String senha = sc.next();
+		
+		
 	}
 
 	public void deletar() {
@@ -60,4 +67,12 @@ public class HandleMenu {
 		return maxId + 1;
 	}
 
+	public void listaEspecifico() {
+		System.out.println("Digite o ID do usuario Especifico");
+		int id = sc.nextInt();
+		gs.listarEspecifico(id);
+		
+	}
+	
+	
 }

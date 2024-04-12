@@ -87,6 +87,7 @@ public class GerenciadorDeUsuarios {
 	}
 
 	public void listarUsuarios() {
+
 		List<Usuario> usuarios = lerUsuarios();
 		// nehum usuario
 		if(usuarios.isEmpty()) {
@@ -97,5 +98,37 @@ public class GerenciadorDeUsuarios {
 				System.out.println("ID: " + usuario.getId() + "; Nome: " + usuario.getNome()+ "" + "; Senha: " + usuario.getSenha());
 			}
 		}
+	}
+
+	public void editarUsuario(int id, String novoNome, String novaSenha) {
+		List<Usuario> usuarios = lerUsuarios();
+		boolean encontrado = false;
+		
+		for(Usuario usuario : usuarios) {
+			if(usuario.getId() == id) {
+				usuario.setNome(novoNome);
+				usuario.setSenha(novaSenha);
+				encontrado = true;
+				break;
+			}
+		}
+		if(encontrado) {
+			reescreverArquivo(usuarios);
+			System.out.println("Usuario editado com sucesso!");
+		}else {
+			System.out.println("Usuario não encontrados");
+		}
+		
+	}
+
+	public void listarEspecifico(int id) {
+		List<Usuario> usuarios = lerUsuarios();
+		
+		for(Usuario usuario : usuarios) {
+			if(usuario.getId() == id) {
+				System.out.println("ID: " + usuario.getId() + "; Nome: " + usuario.getNome()+ "" + "; Senha: " + usuario.getSenha());
+			}
+		}
+		
 	}
 }
